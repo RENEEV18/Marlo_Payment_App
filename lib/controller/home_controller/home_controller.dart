@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marlo_payment_app/utils/colors/colors.dart';
+import 'package:marlo_payment_app/view/transaction_screen/transaction_screen.dart';
 
 class HomeController extends ChangeNotifier {
   List<String> values = [
@@ -84,4 +85,14 @@ class HomeController extends ChangeNotifier {
     Icons.arrow_outward,
     Icons.currency_rupee,
   ];
+  void toTransaction(context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) {
+          return const TransactionScreen();
+        },
+      ),
+    );
+    notifyListeners();
+  }
 }

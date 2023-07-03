@@ -139,7 +139,9 @@ class HomeScreen extends StatelessWidget {
                           fontSize: 20,
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            value.toTransaction(context);
+                          },
                           child: const TextWidget(
                             name: "See all",
                             color: AppColors.kBlue,

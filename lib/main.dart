@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marlo_payment_app/controller/bottom_nav_controller/bottom_nav_controller.dart';
 import 'package:marlo_payment_app/controller/home_controller/home_controller.dart';
+import 'package:marlo_payment_app/controller/transaction_controller.dart/transaction_controller.dart';
 import 'package:marlo_payment_app/view/bottom_nav/bottom_nav.dart';
 import 'package:provider/provider.dart';
 
@@ -21,6 +22,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (context) => HomeController(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => TransactionController(),
         ),
       ],
       child: MaterialApp(
