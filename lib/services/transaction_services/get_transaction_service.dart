@@ -29,6 +29,7 @@ class TransactionService {
           return model;
         }
       }
+      // ignore: deprecated_member_use
     } on DioError catch (e) {
       log(e.message.toString());
       DioExceptions().dioError(e, context);

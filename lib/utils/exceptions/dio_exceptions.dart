@@ -6,6 +6,7 @@ import 'package:marlo_payment_app/utils/error_popup/snackbar.dart';
 
 class DioExceptions {
   void dioError(Object e, BuildContext context) {
+    // ignore: deprecated_member_use
     if (e is DioError) {
       if (e.response?.statusCode == 401) {
         SnackBarPop.popUp(

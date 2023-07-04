@@ -15,7 +15,7 @@ class BottomNav extends StatelessWidget {
             items: value.bottonNavItems,
             showSelectedLabels: true,
             showUnselectedLabels: true,
-            iconSize: 30,
+            iconSize: 25,
             elevation: 0,
             currentIndex: value.currentIndex,
             onTap: (data) {

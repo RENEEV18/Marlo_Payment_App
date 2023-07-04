@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:marlo_payment_app/controller/transaction_controller.dart/transaction_controller.dart';
 import 'package:marlo_payment_app/utils/colors/colors.dart';
 import 'package:marlo_payment_app/utils/style/style.dart';
+import 'package:marlo_payment_app/view/filter_screen/bottom_sheet.dart';
 import 'package:marlo_payment_app/view/widgets/text_widget.dart';
 import 'package:provider/provider.dart';
 
@@ -69,9 +70,15 @@ class TransactionScreen extends StatelessWidget {
                               color: AppColors.kBlack.withOpacity(0.08),
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            child: Icon(
-                              Icons.filter_alt,
-                              color: AppColors.kBlack.withOpacity(0.3),
+                            child: InkWell(
+                              onTap: () {
+                                /// here it goes to bottom sheet
+                                BottomSheetScreen().filterBottomSheet(context);
+                              },
+                              child: Icon(
+                                Icons.filter_alt,
+                                color: AppColors.kBlack.withOpacity(0.3),
+                              ),
                             ),
                           ),
                         ),
@@ -90,6 +97,7 @@ class TransactionScreen extends StatelessWidget {
                               physics: const BouncingScrollPhysics(),
                               itemBuilder: (context, index) {
                                 return ListTile(
+                                  onTap: () {},
                                   leading: Container(
                                     width: 55,
                                     decoration: BoxDecoration(

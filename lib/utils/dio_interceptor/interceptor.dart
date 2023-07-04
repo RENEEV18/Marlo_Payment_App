@@ -20,6 +20,7 @@ class ApiInterceptor {
         onResponse: (response, handler) {
           return handler.next(response);
         },
+        // ignore: deprecated_member_use
         onError: (DioError e, handler) async {
           if (e.response != null) {
             if (e.response?.statusCode == 403 &&

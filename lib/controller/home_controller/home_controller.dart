@@ -61,8 +61,8 @@ class HomeController extends ChangeNotifier {
   ];
 
   List<Color> backgroundColor = [
-    Color.fromARGB(255, 228, 198, 250),
-    Color.fromARGB(255, 252, 211, 217),
+    const Color.fromARGB(255, 228, 198, 250),
+    const Color.fromARGB(255, 252, 211, 217),
     const Color.fromARGB(255, 216, 174, 248),
     const Color.fromARGB(255, 252, 189, 199),
   ];
