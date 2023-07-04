@@ -11,6 +11,7 @@ class TextWidget extends StatelessWidget {
     this.fontFamily,
     this.letterSpacing,
     this.textAlign,
+    this.maxLines,
   });
   final String name;
   final Color? color;
@@ -20,11 +21,13 @@ class TextWidget extends StatelessWidget {
   final TextAlign? textAlign;
   final String? fontFamily;
   final double? letterSpacing;
+  final int? maxLines;
   @override
   Widget build(BuildContext context) {
     return Text(
       name,
       textAlign: textAlign,
+      maxLines: maxLines,
       style: TextStyle(
         color: color,
         fontSize: fontSize,

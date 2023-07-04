@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marlo_payment_app/controller/home_controller/home_controller.dart';
+import 'package:marlo_payment_app/controller/token_controller/token_controller.dart';
 import 'package:marlo_payment_app/utils/colors/colors.dart';
 import 'package:marlo_payment_app/utils/style/style.dart';
 import 'package:marlo_payment_app/view/widgets/listview_builder.dart';
@@ -11,6 +12,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      Provider.of<TokenController>(context, listen: false).getToken(context);
+    });
     return Scaffold(
       appBar: AppBar(
         leading: Padding(

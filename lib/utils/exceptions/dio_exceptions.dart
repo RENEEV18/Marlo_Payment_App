@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:ahamcare/utils/error_popup/snackbar.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:marlo_payment_app/utils/error_popup/snackbar.dart';
 
-class DioException {
+class DioExceptions {
   void dioError(Object e, BuildContext context) {
     if (e is DioError) {
       if (e.response?.statusCode == 401) {
