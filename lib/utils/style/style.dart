@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AppSize {
+  static const kHeight0 = SizedBox(
+    height: 0,
+  );
   static const kHeight5 = SizedBox(
     height: 5,
   );

@@ -308,7 +308,9 @@ class BottomSheetScreen {
                       height: 50,
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          value.filterApplied(context);
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.kBlue,
                           shape: RoundedRectangleBorder(
